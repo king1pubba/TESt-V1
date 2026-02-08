@@ -39,7 +39,7 @@ const app = express();
 const port = process.env.PORT || 8000;
 
 const prefix = '.';
-const ownerNumber = ['94776121326'];
+const ownerNumber = ['94776290170'];
 const credsPath = path.join(__dirname, '/auth_info_baileys/creds.json');
 
 async function ensureSessionFile() {
@@ -81,7 +81,7 @@ global.pluginHooks.push(antiDeletePlugin);
 
 
 async function connectToWA() {
-  console.log("Connecting test-MD 🧬...");
+  console.log("Connecting QUEEN-SP 💥...");
   const { state, saveCreds } = await useMultiFileAuthState(path.join(__dirname, '/auth_info_baileys/'));
   const { version } = await fetchLatestBaileysVersion();
 
@@ -103,9 +103,9 @@ async function connectToWA() {
         connectToWA();
       }
     } else if (connection === 'open') {
-      console.log('✅ test-MD connected to WhatsApp');
+      console.log('✅ QUEEN-SP connected to WhatsApp');
 
-      const up = `test-MD connected ✅\n\nPREFIX: ${prefix}`;
+      const up = `QUEEN-SP connected ✅\n\nPREFIX: ${prefix}`;
       await test.sendMessage(ownerNumber[0] + "@s.whatsapp.net", {
         image: { url: `https://github.com/testwpbot/test12/blob/main/images/Danuwa%20-%20MD.png?raw=true` },
         caption: up
@@ -311,7 +311,7 @@ const quoted = type == 'extendedTextMessage' && mek.message.extendedTextMessage.
 ensureSessionFile();
 
 app.get("/", (req, res) => {
-  res.send("Hey, test-MD started✅");
+  res.send("Hey, QUEEN-SP BOT started✅");
 });
 
 app.listen(port, () => console.log(`Server listening on http://localhost:${port}`));
